@@ -11,10 +11,15 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/admin/login', loginRouter);
 var adminNovedadesRouter = require('./routes/admin/novedades');
+var apiRouter = require('./routes/api');
 
 var app = express();
 
+var cors = require('cors');
+
 const session = require('express-session');
+
+app.use('/api', cors(), apiRouter);
 
 app.use(session({
   secret: 'asdfnkljioqweasd',

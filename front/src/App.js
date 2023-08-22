@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Helmet>
-        meta charSet="utf-8" />
+        <meta charSet="utf-8" />
         <title>The Ark</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
