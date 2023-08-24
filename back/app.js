@@ -12,8 +12,10 @@ var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/admin/login', loginRouter);
 var adminNovedadesRouter = require('./routes/admin/novedades');
 var apiRouter = require('./routes/api');
+var bodyParser = require('body-parser');
 
 var app = express();
+app.use(bodyParser.json());
 
 var cors = require('cors');
 
